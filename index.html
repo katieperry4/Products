@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="https://dummyimage.com/100x50/000/fff" alt="site logo" />
+      </div>
+      <div class="nav-container">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li>Home</li>
+            <li>Products</li>
+            <li>About</li>
+            <li>Contact Us</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="big-image-holder">
+        <img class="big-image" src="https://dummyimage.com/1000x400/000/fff" alt="hero image">
+    </div>
+    <div class="main-content">
+      <h2 id="featured-products">Featured Products</h2>
+      <div class="filter-container">
+        <ul class="product-filter">
+          <li>$</li>
+          <li>$$</li>
+          <li>$$$</li>
+          <li>$$$$</li>
+        </ul>
+      </div>
+      <div class="product-holder"></div>
+    </div>
+    <div class="new-products">
+        <product-template>
+            <img slot="image" src="https://dummyimage.com/200x200/000/fff" alt="dummy">
+            <h2 class="less-margin" slot="title">Sweet Red</h2>
+            <h3 class="less-margin" slot="price">$37.00</h3>
+            <p class="less-margin" slot="description">Yummy yummy in my tummy</p>
+            <button class="cart-button" slot="button">Add to Cart</button>
+        </product-template>
+        <product-template>
+            <img slot="image" src="https://dummyimage.com/200x200/000/fff" alt="dummy">
+            <h2 class="less-margin" slot="title">Sour Red</h2>
+            <h3 class="less-margin" slot="price">$27.00</h3>
+            <p class="less-margin" slot="description">Yummy yummy in my tummy</p>
+            <button class="cart-button" slot="button">Add to Cart</button>
+        </product-template>
+        <product-template>
+            <img slot="image" src="https://dummyimage.com/200x200/000/fff" alt="dummy">
+            <h2 class="less-margin" slot="title">Gross Red</h2>
+            <h3 class="less-margin" slot="price">$7.00</h3>
+            <p class="less-margin" slot="description">Yummy yummy in my tummy</p>
+            <button class="cart-button" slot="button">Add to Cart</button>
+        </product-template>
+        <product-template>
+            <img slot="image" src="https://dummyimage.com/200x200/000/fff" alt="dummy">
+            <h2 class="less-margin" slot="title">Fruity Red</h2>
+            <h3 class="less-margin" slot="price">$370.00</h3>
+            <p class="less-margin" slot="description">Yummy yummy in my tummy</p>
+            <button class="cart-button" slot="button">Add to Cart</button>
+        </product-template>
+    </div>
+
+    <div class="footer-container">
+      <div class="footer-map"></div>
+      <div class="contact-info">
+        <h4>Adress Line</h4>
+        <h4>Adress Line</h4>
+        <h4>Adress Line</h4>
+        <h4>Adress Line</h4>
+        <h4>Phone Number</h4>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>
