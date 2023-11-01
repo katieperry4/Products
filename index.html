@@ -24,7 +24,11 @@
       </div>
     </div>
     <div class="big-image-holder">
-        <img class="big-image" src="https://dummyimage.com/1000x400/000/fff" alt="hero image">
+      <img
+        class="big-image"
+        src="https://dummyimage.com/1000x400/000/fff"
+        alt="hero image"
+      />
     </div>
     <div class="main-content">
       <h2 id="featured-products">Featured Products</h2>
@@ -39,46 +43,74 @@
       <div class="product-holder"></div>
     </div>
     <div class="new-products">
-        <product-template>
-            <img slot="image" src="https://dummyimage.com/200x200/000/fff" alt="dummy">
-            <h2 class="less-margin" slot="title">Sweet Red</h2>
-            <h3 class="less-margin" slot="price">$37.00</h3>
-            <p class="less-margin" slot="description">Yummy yummy in my tummy</p>
-            <button class="cart-button" slot="button">Add to Cart</button>
-        </product-template>
-        <product-template>
-            <img slot="image" src="https://dummyimage.com/200x200/000/fff" alt="dummy">
-            <h2 class="less-margin" slot="title">Sour Red</h2>
-            <h3 class="less-margin" slot="price">$27.00</h3>
-            <p class="less-margin" slot="description">Yummy yummy in my tummy</p>
-            <button class="cart-button" slot="button">Add to Cart</button>
-        </product-template>
-        <product-template>
-            <img slot="image" src="https://dummyimage.com/200x200/000/fff" alt="dummy">
-            <h2 class="less-margin" slot="title">Gross Red</h2>
-            <h3 class="less-margin" slot="price">$7.00</h3>
-            <p class="less-margin" slot="description">Yummy yummy in my tummy</p>
-            <button class="cart-button" slot="button">Add to Cart</button>
-        </product-template>
-        <product-template>
-            <img slot="image" src="https://dummyimage.com/200x200/000/fff" alt="dummy">
-            <h2 class="less-margin" slot="title">Fruity Red</h2>
-            <h3 class="less-margin" slot="price">$370.00</h3>
-            <p class="less-margin" slot="description">Yummy yummy in my tummy</p>
-            <button class="cart-button" slot="button">Add to Cart</button>
-        </product-template>
+      <product-template>
+        <img
+          slot="image"
+          src="https://dummyimage.com/200x200/000/fff"
+          alt="dummy"
+        />
+        <h2 class="less-margin" slot="title">Sweet Red</h2>
+        <h3 class="less-margin" slot="price">$37.00</h3>
+        <p class="less-margin" slot="description">Yummy yummy in my tummy</p>
+        <button class="cart-button" slot="button">Add to Cart</button>
+      </product-template>
+      <product-template>
+        <img
+          slot="image"
+          src="https://dummyimage.com/200x200/000/fff"
+          alt="dummy"
+        />
+        <h2 class="less-margin" slot="title">Sour Red</h2>
+        <h3 class="less-margin" slot="price">$27.00</h3>
+        <p class="less-margin" slot="description">Yummy yummy in my tummy</p>
+        <button class="cart-button" slot="button">Add to Cart</button>
+      </product-template>
+      <product-template>
+        <img
+          slot="image"
+          src="https://dummyimage.com/200x200/000/fff"
+          alt="dummy"
+        />
+        <h2 class="less-margin" slot="title">Gross Red</h2>
+        <h3 class="less-margin" slot="price">$7.00</h3>
+        <p class="less-margin" slot="description">Yummy yummy in my tummy</p>
+        <button class="cart-button" slot="button">Add to Cart</button>
+      </product-template>
+      <product-template>
+        <img
+          slot="image"
+          src="https://dummyimage.com/200x200/000/fff"
+          alt="dummy"
+        />
+        <h2 class="less-margin" slot="title">Fruity Red</h2>
+        <h3 class="less-margin" slot="price">$370.00</h3>
+        <p class="less-margin" slot="description">Yummy yummy in my tummy</p>
+        <button class="cart-button" slot="button">Add to Cart</button>
+      </product-template>
     </div>
 
-    <div class="footer-container">
-      <div class="footer-map"></div>
-      <div class="contact-info">
-        <h4>Adress Line</h4>
-        <h4>Adress Line</h4>
-        <h4>Adress Line</h4>
-        <h4>Adress Line</h4>
-        <h4>Phone Number</h4>
-      </div>
-      <footer class="footer"></footer>
+    <div class="form-container">
+      <form id="form" >
+        <label for="name"> Enter name: </label>
+        <input
+          type="text"
+          id="name"
+          placeholder="First Name"
+          autocomplete="given-name"
+        />
+        <label for="email"> Enter email: </label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+          autocomplete="email"
+        />
+        <label for="age"> Enter age: </label>
+        <input type="number" id="age" placeholder="24" required />
+        <label for="check"> Agree to terms: </label>
+        <input type="checkbox" id="check" required />
+        <input type="button" value="Submit" id="submit" class="button"/>
+      </form>
     </div>
   </body>
 </html>

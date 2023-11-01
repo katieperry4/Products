@@ -67,15 +67,6 @@ class Manager {
 const productManager = new Manager();
 productManager.render();
 
-
-
-
-
-
-
-
-
-
 const productTemplate = document.createElement("template");
 productTemplate.innerHTML = `
     <div>
@@ -91,7 +82,6 @@ productTemplate.innerHTML = `
     </div>
 `;
 
-
 class NewProducts extends HTMLElement {
   constructor() {
     super();
@@ -101,4 +91,46 @@ class NewProducts extends HTMLElement {
   }
 }
 
-customElements.define('product-template', NewProducts);
+customElements.define("product-template", NewProducts);
+
+
+
+
+const emailInput = document.getElementById("email");
+const ageInput = document.getElementById("age");
+const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+emailInput.addEventListener("input", () => {
+  if (!emailPattern.test(emailInput.value)) {
+    emailInput.setCustomValidity("Enter a valid email address");
+  } else {
+    emailInput.setCustomValidity("");
+  }
+  emailInput.reportValidity();
+});
+ageInput.addEventListener("input", () => {
+  if (ageInput.value <= 120 && ageInput.value >= 18) {
+    ageInput.setCustomValidity("");
+  } else {
+    ageInput.setCustomValidity("Must be over 18");
+  }
+  ageInput.reportValidity();
+});
+
+let formInput = {};
+let form = document.getElementById('form');
+
+document.getElementById('submit').addEventListener('click', function () {
+  formInput.name = document.getElementById('name').value;
+  formInput.email = document.getElementById('email').value;
+  formInput.age = document.getElementById('age').value;
+  formInput.check = document.getElementById('check').checked;
+
+  console.log(formInput);
+  const formContainer = document.querySelector('.form-container'); // Select by class name
+  const inputP = document.createElement('p');
+  inputP.textContent = JSON.stringify(formInput); // Display formInput as a JSON string
+  formContainer.appendChild(inputP); 
+});
+
+
